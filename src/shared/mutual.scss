@@ -1,0 +1,8 @@
+@import './variables.scss';
+
+.container {
+    width: $width__desktop;
+    max-width: calc(100% - 2rem);
+    margin: 0 auto;
+    box-sizing: border-box;
+}

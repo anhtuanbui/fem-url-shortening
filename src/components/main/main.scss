@@ -1,0 +1,410 @@
+@import "../../shared/styles.scss";
+
+$mid-background__color: lighten($color__neutral--grayish-violet, 25%);
+
+.hero {
+  position: relative;
+
+  &__background {
+    position: absolute;
+    z-index: -100;
+    right: 0;
+    top: 0;
+
+    @include tablet {
+      position: static;
+    }
+
+    img {
+      width: 120%;
+
+      @include mobile {
+        width: 150%;
+      }
+    }
+  }
+
+  &__info {
+    width: 50%;
+    margin-bottom: 18rem;
+
+    @include tablet {
+      width: 100%;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: $typography__font-weight--bold;
+      color: $color__neutral--very-dark-blue;
+      margin: 1rem 0;
+      padding-top: 3rem;
+      line-height: 5rem;
+
+      @include tablet {
+        font-size: 3rem;
+        line-height: 4rem;
+        margin: 0;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: $typography__font-weight--regular;
+      color: $color__neutral--grayish-violet;
+      margin-bottom: 2rem;
+
+      @include tablet {
+        font-size: 1.25rem;
+        margin-top: 0;
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}
+
+.mid-sections {
+  background-color: $mid-background__color;
+}
+
+.short-link {
+  position: relative;
+  top: -4.5rem;
+
+  &__form {
+    position: relative;
+    background: url("../../images/bg-shorten-desktop.svg") no-repeat center
+      center;
+    background-size: cover;
+    background-color: $color__primary--dark-violet;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+
+    @include tablet {
+      flex-direction: column;
+      padding: 2rem;
+    }
+
+    @include mobile {
+      background: url("../../images/bg-shorten-mobile.svg") no-repeat center
+        center;
+      background-size: cover;
+      background-color: $color__primary--dark-violet;
+      padding: 1.25rem;
+    }
+
+    input,
+    button {
+      border: none;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    input {
+      flex-grow: 1;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: $typography__font-weight--regular;
+      color: $color__neutral--very-dark-blue;
+
+      @include tablet {
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    button {
+      $padding: 2rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: $typography__font-weight--bold;
+      color: white;
+      background-color: $color__primary--cyan;
+      margin-left: 1rem;
+      padding-left: $padding;
+      padding-right: $padding;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lighten($color__primary--cyan, 20%);
+      }
+
+      @include tablet {
+        width: 100%;
+        margin: 0;
+        margin-top: 1rem;
+      }
+    }
+
+    &-error {
+      position: absolute;
+      bottom: 0.5rem;
+      left: 3rem;
+      font-size: 0.75rem;
+      color: $color__secondary--red;
+      display: none;
+      font-style: italic;
+
+      @include tablet {
+        position: static;
+        align-self: flex-start;
+        margin: 0;
+      }
+
+      &--active {
+        display: block;
+      }
+    }
+  }
+}
+
+.features {
+  position: relative;
+  padding-bottom: 8rem;
+
+  &__info {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 6rem;
+
+    @include tablet {
+      width: 100%;
+      padding-top: 0;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    p {
+      color: $color__neutral--grayish-violet;
+    }
+  }
+
+  &__middle {
+    width: 75%;
+    height: 0.5rem;
+    background-color: $color__primary--cyan;
+    position: absolute;
+    top: 19.5rem;
+
+    @include tablet {
+      width: 0.5rem;
+      height: 31rem;
+      left: 50%;
+      top: 20rem;
+      transform: translateX(-50%);
+    }
+
+    @include mobile {
+      height: 42rem;
+    }
+  }
+
+  &__cards {
+    align-items: stretch;
+    display: flex;
+    gap: 1.5rem;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+}
+
+.card {
+  background-color: white;
+  padding: 1rem;
+  position: relative;
+  border-radius: 0.5rem;
+
+  &:first-child {
+    top: -2.5rem;
+  }
+
+  &:last-child {
+    top: 2.5rem;
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.75rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -1.5rem;
+    background-color: $color__primary--dark-violet;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__info {
+    h3 {
+      margin-top: 2rem;
+    }
+
+    p {
+      color: $color__neutral--grayish-violet;
+    }
+  }
+}
+
+.get-started {
+  background: url("../../images/bg-boost-desktop.svg") no-repeat center center;
+  background-size: cover;
+  background-color: $color__primary--dark-violet;
+
+  @include mobile {
+    background: url("../../images/bg-boost-mobile.svg") no-repeat center center;
+    background-size: cover;
+    background-color: $color__primary--dark-violet;
+  }
+
+  &__info {
+    text-align: center;
+    padding: 2rem 0;
+
+    h2 {
+      color: white;
+      margin: 0;
+      margin-bottom: 0.75rem;
+    }
+  }
+}
+
+.result {
+  margin-top: -4.5rem;
+  margin-bottom: 4rem;
+}
+
+.shorted-link {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  margin-top: 1rem;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: column;
+    gap: 0rem;
+    align-items: flex-start;
+  }
+
+  p {
+    margin: 0.5rem 0;
+  }
+
+  &__original {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+
+    @include tablet {
+      width: calc(100% - 3rem);
+    }
+  }
+
+  &__shortened {
+    a {
+      color: $color__primary--cyan;
+      text-decoration: none;
+      text-align: right;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__menu {
+    position: relative;
+    &-buttons {
+      display: none;
+      position: absolute;
+      background-color: white;
+      top: 2rem;
+      left: 1rem;
+      border: 1px solid $color__neutral--grayish-violet;
+      border-radius: 0.25rem;
+
+      @include tablet {
+        right: 1rem;
+        left: unset;
+      }
+      
+      button {
+        padding: 0.5rem 1rem;
+      }
+
+      &--active {
+        display: block;
+      }
+    }
+  }
+}
+
+.button {
+  &__small {
+    padding: 0;
+    margin: 0;
+    font-weight: $typography__font-weight--regular;
+    
+    &:hover {
+      color: $color__neutral--grayish-violet;
+
+      svg {
+        fill: $color__neutral--grayish-violet;
+      }
+    }
+  }
+
+  &__three-dots {
+    position: absolute;
+    top: 0;
+    left: 0.65rem;
+    width: fit-content;
+
+    @include tablet {
+      right: 0.65rem;
+      left: unset;
+    }
+  }
+
+  &__round-corner {
+    background-color: $color__primary--cyan;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    color: white;
+    min-width: 135px;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: lighten($color__primary--cyan, 20%);
+    }
+
+    &--active {
+      background-color: $color__primary--dark-violet;
+
+      &:hover {
+        background-color: $color__primary--dark-violet;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import './shared/variables.scss';
+
+body, html {
+  margin: 0;
+  font-family: $typography__font-family;
+  font-size: $typography__font-size;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
