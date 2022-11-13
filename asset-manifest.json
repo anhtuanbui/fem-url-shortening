@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/fem-url-shortening/static/css/main.e453067f.css",
+    "main.css": "/fem-url-shortening/static/css/main.6974ed4b.css",
     "main.js": "/fem-url-shortening/static/js/main.87e6eaf7.js",
     "static/js/787.91e9b957.chunk.js": "/fem-url-shortening/static/js/787.91e9b957.chunk.js",
     "static/media/illustration-working.svg": "/fem-url-shortening/static/media/illustration-working.c9b5ef5452363d8be3df709375d50bd0.svg",
@@ -18,12 +18,12 @@
     "static/media/icon-facebook.svg": "/fem-url-shortening/static/media/icon-facebook.60fb55ea5c3e289b0022c6a6db577a3d.svg",
     "static/media/bg-shorten-mobile.svg": "/fem-url-shortening/static/media/bg-shorten-mobile.41c34b33a14a3077e506.svg",
     "static/media/threedots.svg": "/fem-url-shortening/static/media/threedots.cf47fecbf258f686f75b1a9d1946dad8.svg",
-    "main.e453067f.css.map": "/fem-url-shortening/static/css/main.e453067f.css.map",
+    "main.6974ed4b.css.map": "/fem-url-shortening/static/css/main.6974ed4b.css.map",
     "main.87e6eaf7.js.map": "/fem-url-shortening/static/js/main.87e6eaf7.js.map",
     "787.91e9b957.chunk.js.map": "/fem-url-shortening/static/js/787.91e9b957.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e453067f.css",
+    "static/css/main.6974ed4b.css",
     "static/js/main.87e6eaf7.js"
   ]
 }
